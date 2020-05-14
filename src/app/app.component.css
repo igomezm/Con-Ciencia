@@ -7,6 +7,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  #lista1 li {
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
+  
+}
 
   h1,
   h2,
