@@ -1,3 +1,14 @@
+body{
+  background-image: url(../assets/1.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
 
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -7,16 +18,23 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .mat-list-item {
+    float: right;
+  }
   #lista1 li {
     display:inline;
-    padding: left 30px;
-    padding-right:30px;
-  
+    padding-left:10px;
+    padding-right:10px;
 }
-.flexsearch--wrapper {
+
+/***********************
+ * Essential Structure *
+ ***********************/
+ .flexsearch--wrapper {/*Largo del buscador*/
 	height: auto;
 	width: auto;
-	max-width: 100%;
+	max-width: 45%;
 	overflow: hidden;
 	background: transparent;
 	margin: 0;
@@ -29,12 +47,12 @@
 }
 	
 .flexsearch--input-wrapper {
-	padding: 0 66px 0 0; /* Right padding for submit button width */
+	padding: 0 32px 0 0; /* Right padding for submit button width */
 	overflow: hidden;
 }
 
 .flexsearch--input {
-  width: 100%;
+  width: 90%;
 }
 
 /***********************
@@ -48,8 +66,8 @@
   -webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
- 	height: 60px;
-  padding: 0 46px 0 10px;
+ 	height: 30px;
+  padding: 0 20px 0 15px;
 	border-color: #888;
   border-radius: 35px; /* (height/2) + border-width */
   border-style: solid;
@@ -67,12 +85,12 @@
 	right: 0;
 	top: 0;
 	display: block;
-	width: 60px;
-	height: 60px;
+	width: 800px;
+	height: 800px;
   padding: 0;
   border: none;
-	margin-top: 20px; /* margin-top + border-width */
-  margin-right: 5px; /* border-width */
+	margin-top: 50px; /* margin-top + border-width */
+  margin-right: 55px; /* border-width */
 	background: transparent;
   color: #888;
   font-family: 'Helvetica', sans-serif;
@@ -102,20 +120,6 @@ input:-moz-placeholder {
   color: #888
 }
 
-
-/****************
- * Pretify demo *
- ****************/
-.h1 {
-  float: left;
-  margin: 25px;
-  color: #333;
-  font-family: 'Helvetica', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-  text-align: center;
-}
 
   h1,
   h2,
@@ -154,14 +158,6 @@ input:-moz-placeholder {
     height: 180px;
   }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
 
   .content {
     display: flex;

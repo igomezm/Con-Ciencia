@@ -1,29 +1,52 @@
+<mat-toolbar>  
+  <mat-toolbar-row>
+    <span>First Row</span>
+  </mat-toolbar-row>
 
+  <mat-toolbar-row>
+    <span>Second Row</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 
+<!-- Loader -->
+<div class="loader">
+  <div class="loader-img"></div>
+</div>
 <!-- Toolbar -->
+
 <div class="toolbar" role="banner">
+  <div class="LogoCC">
+    <span class="logo"></span>
+    <a href="index.html">
+      <img alt="conciencia" id="logo" src="assets/LogoCC.png">
+    </a>
+  </div>
 
-  <img width="400" alt="Con Ciencia" src="assets/LogoCC.png"/>
 
-  <ul  id="lista1" style="margin-left: auto; margin-top: auto;">
+  <!--<img width="400" alt="Con Ciencia" src="assets/LogoCC.png"/>-->
 
-    <li routerlink="index.html">Inicio</li>
-    <li routerlink="#quienessomos">Quienes Somos</li>
-    <li routerlink="#semilleros">Semilleros</li>
-    <li><a class="scroll-link" href="#contacto">Contacto</a></li>
-    <div class="flexsearch">
-        <div class="flexsearch--wrapper">
+    <ul id="lista1" style="margin-left: auto; margin-top:initial;">
+      <li routerlink="index.html">Inicio</li>
+      <li routerlink="#quienessomos">Quienes Somos</li>
+      <li routerlink="#semilleros">Semilleros</li>
+      <li routerlink="#semilleros">Contacto</li>
+
+
+      <div class="flexsearch">
+        <div class="flexsearch--wrapper" style="margin-left: auto; margin-top:initial;">
           <form class="flexsearch--form" action="#" method="post">
             <div class="flexsearch--input-wrapper">
-              <input class="flexsearch--input" type="search" placeholder="search">
+              <input class="flexsearch--input" type="Busca" placeholder="Busca">
             </div>
-            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+            <input class="flexsearch--submit" type="submit" value="&#10140;" />
           </form>
-    </div>
-    </div>
-  </ul>
-</div>
-    <!--<li>
+
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <!--<li>
       <span class="separador">| </span><a href="https://informaticapc.com/blog/">Ir al blog</a>
       
   </li>
@@ -43,7 +66,7 @@
         </button>
         <a class="navbar-brand" href="index.html">PetLover</a>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling
+       Collect the nav links, forms, and other content for toggling
       <div class="collapse navbar-collapse" id="top-navbar-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a class="scroll-link" href="#top-content">Inicio</a></li>
@@ -257,4 +280,4 @@
 
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
