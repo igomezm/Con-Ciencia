@@ -25,6 +25,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatListModule,
     BrowserAnimationsModule, 
     MatToolbarModule,
+    MatIconModule,
     MatButtonModule,
   
   ],

@@ -28,6 +28,14 @@ body{
     padding-right:10px;
 }
 
+.crm-navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+}
+
 /***********************
  * Essential Structure *
  ***********************/
