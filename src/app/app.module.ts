@@ -15,16 +15,20 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RegisterComponent } from './register/register.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
+    NgImageSliderModule,
     AppRoutingModule,
     MatListModule,
     BrowserAnimationsModule, 
@@ -32,7 +36,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatIconModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,   
+    ReactiveFormsModule
   
   ],
   exports:[],
