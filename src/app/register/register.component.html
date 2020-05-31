@@ -1,0 +1,139 @@
+<mat-card class="example-card" style="margin-right: 800px;" align = center>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title align = left|center|right|justify>FORMULARIO DE REGISTRO</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <div class="example-form">
+            <hr>
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>First name and last name</mat-label>
+                <input matInput>
+              </mat-form-field></table>
+          
+            
+                <table class="example-full-width" cellspacing="0"><tr>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Identification Document</mat-label>
+                      <input matInput>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Phone</mat-label>
+                      <input matInput>
+                    </mat-form-field></td>
+                  </tr></table>
+              
+          
+           
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Age</mat-label>
+                <input matInput placeholder="Ex. 10">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Birthdate</mat-label>
+                <input matInput placeholder="Ex. California">
+              </mat-form-field></td>
+            <td>
+                <div>
+                    <mat-form-field>
+                      <mat-label>City</mat-label>
+                      <mat-select [(ngModel)]="selectedValue" name="City">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                          {{food.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>                  
+                </div>
+              </td>
+            </tr></table>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Address</mat-label>
+                <input matInput>
+              </mat-form-field>
+
+
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>University Career</mat-label>
+                  <input matInput>
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>semester</mat-label>
+                  <input matInput>
+                </mat-form-field></td>
+              </tr></table>
+
+
+              <mat-form-field class="example-full-width">
+                <mat-label>University</mat-label>
+                <input matInput>
+              </mat-form-field>
+
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Hotbed of Interest</mat-label>
+                <input matInput>
+              </mat-form-field>
+              
+
+              <div>Personal Reference</div>
+
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput>
+              </mat-form-field>
+
+
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Address</mat-label>
+                  <input matInput>
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Phone</mat-label>
+                  <input matInput>
+                </mat-form-field></td>
+              </tr></table>
+
+              <div>Attach the following documents</div>
+              <br>
+
+              <div style="color: gray;">
+                  certificacions:
+
+                  <button> select a file</button>
+              </div>
+              <br>
+
+              <div style="color: gray;">
+                curriculum vitae:
+                <button> select a file</button>
+                <br>
+                <br>
+
+
+                <div>
+                    <mat-checkbox>I accept the terms and conditions</mat-checkbox>
+                </div>
+            </div>
+
+
+
+
+
+          </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">Register</button>
+    </mat-card-actions>
+  </mat-card>

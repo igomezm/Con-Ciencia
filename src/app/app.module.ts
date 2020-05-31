@@ -16,8 +16,19 @@ import { RegisterComponent } from './register/register.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { Routes, RouterModule } from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import { SemillerosComponent } from './semilleros/semilleros.component';
+
+export const routes: Routes=[
+  {path : 'register', component: RegisterComponent, pathMatch: 'full'},
+  {path : 'home', component: SemillerosComponent, pathMatch: 'full'}
+
+]
 
 
 @NgModule({
@@ -30,14 +41,19 @@ import { NgImageSliderModule } from 'ng-image-slider';
     BrowserModule,
     NgImageSliderModule,
     AppRoutingModule,
+    MatCheckboxModule,
+    MatSelectModule,
     MatListModule,
+    FormsModule,
     BrowserAnimationsModule, 
     MatToolbarModule,
     MatIconModule,
     MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,   
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   
   ],
   exports:[],
