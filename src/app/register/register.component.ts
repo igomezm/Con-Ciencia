@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   selectedValue: string;
   foods: Food[] = [
     {value: 'Bogota', viewValue: 'Bogota'},
+    {value: 'Bucarmanga', viewValue: 'Bucaramanga'},
     {value: 'Cartagena', viewValue: 'Cartagena'},
     {value: 'Medellin', viewValue: 'Medellin'}
   ];
