@@ -1,0 +1,27 @@
+
+<mat-card class="example-card" style="margin-left: 30%; top: 150px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+  
+      <table class="example-container"><tr>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field></tr>
+      </table>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [ngModel]="user.password">
+        </mat-form-field>
+      </div>
+  
+  
+    </mat-card-header>
+ 
+   
+  </mat-card>
+  
+  
+  
