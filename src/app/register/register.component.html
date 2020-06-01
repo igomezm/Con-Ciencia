@@ -1,4 +1,4 @@
-<class class="example-card" style="margin-right: 800px;" fxLayout="row" fxLayoutAlign="center">
+<mat-card class="example-card" style="margin-right: 800px;" >
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title align = left|center|right|justify>FORMULARIO DE REGISTRO</mat-card-title>
@@ -13,40 +13,56 @@
             <table class="example-full-width" cellspacing="0"><tr>
               <td><mat-form-field class="example-full-width">
                 <mat-label>First name and last name</mat-label>
-                <input matInput>
+                <input matInput required>
               </mat-form-field></table>
           
-            
                 <table class="example-full-width" cellspacing="0"><tr>
                     <td><mat-form-field class="example-full-width">
                       <mat-label>Identification Document</mat-label>
-                      <input matInput>
+                      <input matInput required>
                     </mat-form-field></td>
-                    <td><mat-form-field class="example-full-width">
+                    <td>
+                      
+                      <mat-form-field class="example-full-width">
                       <mat-label>Phone</mat-label>
-                      <input matInput>
+                      <input matInput required placeholder="xxx xxx xx xx">
                     </mat-form-field></td>
                   </tr></table>
-              
-          
-           
+
+                  <table class="example-container"><tr>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Enter your email</mat-label>
+                      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field></tr>
+                  </table>
+
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Password</mat-label>
+                      <input matInput type="password" [(ngModel)]= "user.password">
+                    </mat-form-field>
+
+
+
           
             <table class="example-full-width" cellspacing="0"><tr>
               <td><mat-form-field class="example-full-width">
                 <mat-label>Age</mat-label>
-                <input matInput placeholder="Ex. 10">
+                <input matInput placeholder="Ex. 10" required>
               </mat-form-field></td>
-              <td><mat-form-field class="example-full-width">
+              <td>
+                <mat-form-field class="example-full-width">
                 <mat-label>Birthdate</mat-label>
-                <input matInput placeholder="Ex. California">
+                <input matInput placeholder="Ex. 1988/09/24" required>
               </mat-form-field></td>
             <td>
                 <div>
                     <mat-form-field>
                       <mat-label>City</mat-label>
                       <mat-select [(ngModel)]="selectedValue" name="City">
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                          {{food.viewValue}}
+                        <mat-option *ngFor="let Ciudad of ciudades" [value]="Ciudad.value">
+                          {{Ciudad.viewValue}}
                         </mat-option>
                       </mat-select>
                     </mat-form-field>                  
@@ -59,6 +75,7 @@
                 <input matInput>
               </mat-form-field>
 
+          
 
               <table class="example-full-width" cellspacing="0"><tr>
                 <td><mat-form-field class="example-full-width">
@@ -71,12 +88,14 @@
                 </mat-form-field></td>
               </tr></table>
 
+            
 
               <mat-form-field class="example-full-width">
                 <mat-label>University</mat-label>
                 <input matInput>
               </mat-form-field>
 
+             
 
               <mat-form-field class="example-full-width">
                 <mat-label>Hotbed of Interest</mat-label>
@@ -126,14 +145,12 @@
                 </div>
             </div>
 
-
-
-
-
           </div>
 
     </mat-card-content>
+
     <mat-card-actions>
-        <button mat-raised-button color="primary">Register</button>
+        <button mat-raised-button color="primary" redirectTo="login">Register</button>
     </mat-card-actions>
+    
   </mat-card>

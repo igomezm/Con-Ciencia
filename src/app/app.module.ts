@@ -23,10 +23,23 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import { SemillerosComponent } from './semilleros/semilleros.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { LoginComponent } from './login/login.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+//import {MatSnackBar} from '@angular/material/snack-bar';
+//import { ModelComponent } from './model/.component';
+
+
+
 
 export const routes: Routes=[
-  {path : 'register', component: RegisterComponent, pathMatch: 'full'},
-  {path : 'home', component: SemillerosComponent, pathMatch: 'full'}
+  {path: '', redirectTo: 'welcome', pathMatch: 'full'},
+  {path: 'welcome', component: WelcomeComponent, pathMatch: 'full'},
+  {path: 'login', component: LoginComponent, pathMatch: 'full'},
+  {path: 'register', component: RegisterComponent, pathMatch: 'full'},
+  {path: 'semilleros', component: SemillerosComponent, pathMatch: 'full'},
+  {path: 'user-edit', component: NameEditorComponent, pathMatch: 'full'}
+  
 
 ]
 
@@ -35,16 +48,21 @@ export const routes: Routes=[
   declarations: [
     AppComponent,
     RegisterComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    WelcomeComponent,
+    //ModelComponent
   ],
   imports: [
     BrowserModule,
+    //MatSnackBar,
+    MatSnackBarModule,
     NgImageSliderModule,
     AppRoutingModule,
     MatCheckboxModule,
     MatSelectModule,
     MatListModule,
     FormsModule,
+    MatSelectModule,
     BrowserAnimationsModule, 
     MatToolbarModule,
     MatIconModule,

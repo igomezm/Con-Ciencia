@@ -7,9 +7,9 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./name-editor.component.css']
 })
 export class NameEditorComponent {
-
+/*
   name = new FormControl('');
-
+*/
 }
 
   /*constructor() { }
