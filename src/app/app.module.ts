@@ -23,6 +23,7 @@ import { SemillerosComponent } from './semilleros/semilleros.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ProfileComponent } from './profile/profile.component';
 //import {MatSnackBar} from '@angular/material/snack-bar';
 //import { ModelComponent } from './model/.component';
 
@@ -47,6 +48,7 @@ export const routes: Routes=[
     RegisterComponent,
     NameEditorComponent,
     WelcomeComponent,
+    ProfileComponent,
     //ModelComponent
   ],
   imports: [
