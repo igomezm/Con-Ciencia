@@ -21,6 +21,7 @@ export class MyTel {
 
 export class RegisterComponent implements OnInit {
   public user: User;
+  public confirm: string;
 
 
   selectedValue: string;
