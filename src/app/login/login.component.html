@@ -1,30 +1,11 @@
 
-<mat-card class="example-card" style="margin-left: 30%; top: 150px;">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-
-                <div>
-                  <mat-form-field>
-                    <mat-label>Tipo de Usuario</mat-label>
-                    <mat-select [(ngModel)]="selectedValue" name="Tipo de Usuario">
-                      <mat-option *ngFor="let Usuario of usuarios" [value]="Usuario.value">
-                        {{Usuario.viewValue}}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>                  
-              </div>
-            </td>
-          </tr></table>
-
-
-      <table class="example-container"><tr>
-                    <mat-form-field appearance="fill">
-                      <mat-label>Enter your email</mat-label>
-                      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                    </mat-form-field></tr>
-                  </table>
+<mat-card class="example-card" style="margin-left: 30%;">
   
+      <div mat-card-avatar class="example-header-image"></div>
+<div><h2>Login</h2></div>
+                
+      
+         
       <table class="example-container"><tr>
         <mat-form-field appearance="fill">
           <mat-label>Enter your email</mat-label>
@@ -33,15 +14,26 @@
         </mat-form-field></tr>
       </table>
 
+      <div>
+        <mat-form-field>
+          <mat-label>Tipo de Usuario</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="Tipo de Usuario">
+            <mat-option *ngFor="let Usuario of usuarios" [value]="Usuario.value">
+              {{Usuario.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>                  
+    </div>
+
         <mat-form-field class="example-full-width">
           <mat-label>Password</mat-label>
           <input matInput type="password" [ngModel]="user.password">
         </mat-form-field>
-      </div>
-  
-  
-    </mat-card-header>
     
+  
+  
+    
+
     <mat-card-actions style="float: right;">
       <button  mat-button (click)="direction()">REGISTER</button>
       <button mat-button (click)="login()">LOGIN</button>
@@ -49,7 +41,7 @@
     </mat-card-actions>
  
    
-  </mat-card>
+  </mat-card>-->
   
   
   

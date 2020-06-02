@@ -10,7 +10,11 @@
     /*background-image: url(../assets/1.jpg);*/
     background-size: 100% 100%;
     background-attachment: fixed;
+    
+
   }
+ 
+ 
   
   .example-fill-remaining-space {
     /* This fills the remaining space, by using flexbox. 
@@ -34,6 +38,7 @@
       display:inline;
       padding-left:10px;
       padding-right:10px;
+      color: #e6ebf1;
   }
   
   .crm-navigation-bar {

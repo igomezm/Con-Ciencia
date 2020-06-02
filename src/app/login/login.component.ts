@@ -17,6 +17,16 @@ interface Usuario {
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
   
   public user: User;
   keyUser = '&I%U%$234';
@@ -32,14 +42,16 @@ export class LoginComponent implements OnInit {
   ];
 
   constructor(private _snackBar: MatSnackBar,private userService: UserService, private router: Router){
+    this.user={
 
-    fullname: null;
-    iduser: null;
-    username: null;
-    password: null;
-    telefono: null;
-    email: null;
+    fullname: null,
+    iduser: null,
+    username: null,
+    password: null,
+    telefono: null,
+    email: null,
   }
+}
 
   ngOnInit(): void {
 

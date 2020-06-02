@@ -10,7 +10,6 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatIconModule } from '@angular/material/icon';
 import { RegisterComponent } from './register/register.component';
-import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -26,7 +25,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProfileComponent } from './profile/profile.component';
 //import {MatSnackBar} from '@angular/material/snack-bar';
 //import { ModelComponent } from './model/.component';
-
+import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -49,6 +49,8 @@ export const routes: Routes=[
     NameEditorComponent,
     WelcomeComponent,
     ProfileComponent,
+    LoginComponent,
+    SemillerosComponent
     //ModelComponent
   ],
   imports: [
@@ -59,6 +61,7 @@ export const routes: Routes=[
     AppRoutingModule,
     MatCheckboxModule,
     MatSelectModule,
+    HttpClientModule,
     MatListModule,
     FormsModule,
     MatSelectModule,
